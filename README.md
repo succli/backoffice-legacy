@@ -1,3 +1,5 @@
+**DISCLAIMER: This is an outdated repository from 2018 for my university thesis project, which I only keep as a relic**
+
 # Backoffice
 
 My university thesis with title "Backoffice in Node.js environment/Backoffice megvalósítása Node.js környezetben"
