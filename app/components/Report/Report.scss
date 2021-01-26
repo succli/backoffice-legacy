@@ -1,0 +1,20 @@
+@import '../../styles/variables';
+
+.report-filters {
+  margin-bottom: 25px;
+}
+
+.filter-action-button {
+  display: inline-flex;
+  background: $primary-color-dark;
+  color: $secondary-text-color;
+  border: none;
+  padding: 2px;
+  height: 20px;
+  width: 20px;
+  margin: 10px 2px;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  cursor: pointer;
+}

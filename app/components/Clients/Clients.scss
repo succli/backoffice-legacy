@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+
+.clients-wrapper {
+  
+  select.form-control {
+    color: $pagination-text-color;
+    background-color: $secondary-text-color;
+    border: 1px solid $pagination-border-color;
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0;
+    box-shadow: none;
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+}

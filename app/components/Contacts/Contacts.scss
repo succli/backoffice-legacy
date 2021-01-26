@@ -1,0 +1,181 @@
+@import '../../styles/variables';
+
+.table-container {
+
+  @media #{$medium-and-up} {
+    width: 100%;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: separate;
+    clear: both;
+    margin: 6px 0 6px 0;
+    max-width: none;
+    border: 1px solid $primary-color;
+    border-spacing: 0;
+
+    th {
+      box-sizing: content-box;
+    }
+
+    & > thead {
+
+      & > tr {
+
+        & > th {
+          padding: 8px;
+          line-height: 1.4;
+          vertical-align: bottom;
+          border: 1px solid $primary-color;
+          border-bottom-width: 2px;
+          border-left-width: 0;
+          border-top: 0;
+          cursor: pointer;
+
+          .sortable {
+            position: relative;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+
+    & > tbody {
+
+      & > tr {
+        
+        &:nth-of-type(odd) {
+          background: $table-row-odd-color;
+        }
+
+        & > td {
+          padding: 8px;
+          line-height: 1.4;
+          vertical-align: top;
+          border: 1px solid $primary-color;
+          border-left-width: 0;
+          border-bottom-width: 0;
+        }
+      }
+    }
+  }
+}
+
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  border-radius: 4px;
+  margin: 15px 0;
+  white-space: nowrap;
+  list-style: none;
+
+  & > li {
+    display: inline;
+    list-style: none;
+
+    &.disabled {
+
+      a {
+        color: $pagination-disabled-text-color;
+        cursor: not-allowed;
+        background-color: $secondary-text-color;
+        border-color: $pagination-border-color;
+      }
+    }
+
+    &.active {
+
+      a {
+        z-index: 3;
+        color: $secondary-text-color;
+        cursor: default;
+        background: $primary-color;
+        border-color: $primary-color;
+      }
+    }
+
+    &:first-child {
+
+      a {
+        margin-left: 0;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+    }
+
+    &:last-child {
+
+      a {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+    }
+
+    a, span {
+      position: relative;
+      padding: 6px 12px;
+      line-height: 1.4;
+      text-decoration: none;
+      border: 1px solid $pagination-border-color;
+    }
+
+    a {
+      background: $pagination-background-color;
+      color: $pagination-text-color;;
+    }
+  }
+}
+
+.filter-container {
+  position: relative;
+  margin: 0 0 30px 0;
+
+  .filter-input {
+    color: $pagination-text-color;
+    background-color: $secondary-text-color;
+    border: 1px solid $pagination-border-color;
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0;
+    box-shadow: none;
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    margin: 0;
+  }
+
+  .close {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    height: 20px;
+    cursor: pointer;
+  }
+}
+
+.contacts-wrapper {
+  
+  select.form-control {
+    color: $pagination-text-color;
+    background-color: $secondary-text-color;
+    border: 1px solid $pagination-border-color;
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0;
+    box-shadow: none;
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    margin: 0 0 30px 0;
+  }
+}
+
+.record-count.text-center {
+  text-align: right;
+}

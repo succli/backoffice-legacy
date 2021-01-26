@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+#page404 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10000;
+  background: $body-background;
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    color: $secondary-text-color;
+    margin: 20px 0;
+    text-transform: none;
+  }
+
+  a {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: $secondary-color;
+    text-decoration: none;
+  }
+}

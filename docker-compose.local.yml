@@ -1,0 +1,15 @@
+version: "2"
+services:
+  web:
+    ports:
+      - "32781:3000"
+    environment:
+      - ENVIRONMENT=development
+      - DOMAIN=localhost:32781
+    volumes:
+      - /var/www/backoffice:/opt/app
+    entrypoint: /opt/app/entrypoint.sh
+  
+  mongo:
+    ports:
+      - "27018:27017"

@@ -1,0 +1,14 @@
+version: "2"
+services:
+  web:
+    image: succli/backoffice:latest
+    ports:
+      - "3000"
+    links:
+      - mongo
+    environment:
+      - DATABASE=mongodb://mongo:27017/backoffice
+      - SECRET=BhKxhiTTU4aNtPOlXJIMv1RpKcRHnVCf
+  
+  mongo:
+    image: mongo:latest

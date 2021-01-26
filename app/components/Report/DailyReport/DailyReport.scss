@@ -1,0 +1,13 @@
+@import '../../../styles/variables';
+
+.log-nav {
+  color: $primary-color-dark;
+
+  a {
+    color: $primary-color-dark;
+
+    .fa {
+      color: $secondary-color;
+    }
+  }
+}

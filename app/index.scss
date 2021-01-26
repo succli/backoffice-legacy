@@ -1,0 +1,350 @@
+@import 'styles/fonts';
+@import 'styles/variables';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $primary-font-family;
+  font-size: $html-font-size;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100%;
+  background: $wrapper-background;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: $primary-color-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid $primary-color-dark;
+  background: $primary-color;
+
+  &:hover {
+    background: $primary-color-light;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+button, a, input, select {
+  &:focus {
+    outline: none;
+  }
+}
+
+input, button, label {
+  font-family: $primary-font-family;
+}
+
+.input-group {
+  margin: 0 0 20px 0;
+  background: $secondary-text-color;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+
+  &-addon {
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    color: $primary-color-dark;
+    font-size: 0.75em;
+  }
+
+  .form-control {
+    border: 1px solid $primary-color-dark;
+    background: none;
+    padding: 10px 15px;
+    font-size: 0.875em;
+    width: calc(100% - 25px);
+    color: $primary-color-dark;
+    background: $secondary-text-color;
+  }
+
+  & + .form-error {
+    display: block;
+    margin: -15px 0 20px 0;
+  }
+}
+
+.form-group {
+  margin-bottom: 10px!important;
+
+  label {
+    font-size: 0.875em;
+    font-weight: 700;
+    color: $primary-color-dark;
+  }
+
+  .form-control {
+    border: 1px solid $primary-color-dark;
+    background: none;
+    padding: 10px 15px;
+    font-size: 0.875em;
+    width: 100%;
+    color: $primary-color-dark;
+    background: $secondary-text-color;
+    box-shadow: none;
+
+    &[disabled] {
+      background: $wrapper-background;
+      cursor: not-allowed;
+    }
+  }
+
+  textarea.form-control {
+    resize: none;
+    min-height: 160px;
+  }
+
+  select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyODQuOTI5IiBoZWlnaHQ9IjI4NC45MjkiPjxwYXRoIGQ9Ik0yODIuMDgyIDc2LjUxMWwtMTQuMjc0LTE0LjI3M2MtMS45MDItMS45MDYtNC4wOTMtMi44NTYtNi41Ny0yLjg1Ni0yLjQ3MSAwLTQuNjYxLjk1LTYuNTYzIDIuODU2TDE0Mi40NjYgMTc0LjQ0MSAzMC4yNjIgNjIuMjQxYy0xLjkwMy0xLjkwNi00LjA5My0yLjg1Ni02LjU2Ny0yLjg1Ni0yLjQ3NSAwLTQuNjY1Ljk1LTYuNTY3IDIuODU2TDIuODU2IDc2LjUxNUMuOTUgNzguNDE3IDAgODAuNjA3IDAgODMuMDgyYzAgMi40NzMuOTUzIDQuNjYzIDIuODU2IDYuNTY1bDEzMy4wNDMgMTMzLjA0NmMxLjkwMiAxLjkwMyA0LjA5MyAyLjg1NCA2LjU2NyAyLjg1NHM0LjY2MS0uOTUxIDYuNTYyLTIuODU0TDI4Mi4wODIgODkuNjQ3YzEuOTAyLTEuOTAzIDIuODQ3LTQuMDkzIDIuODQ3LTYuNTY1IDAtMi40NzUtLjk0NS00LjY2NS0yLjg0Ny02LjU3MXoiLz48L3N2Zz4=);
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    background-size: 10px;
+  }
+}
+
+.form-error {
+  font-size: 0.75rem;
+  color: $error-color;
+  line-height: 2;
+  text-align: left;
+}
+
+.btn {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-size: 0.875em;
+  font-weight: 600;
+  padding: 10px 20px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  text-decoration: none;
+  display: inline-flex;
+
+  &:focus {
+    outline: none;
+  }
+
+  &-primary {
+    background: $primary-color-dark;
+    color: $primary-color-light!important;
+
+    &:hover {
+      color: $secondary-text-color!important;
+    }
+  }
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 1.1;
+  color: $primary-color-dark;
+  text-transform: uppercase;
+
+  small {
+    font-size: 0.875em;
+    display: inline-block;
+    padding-left: 4px;
+    font-weight: 300;
+    line-height: 1;
+    color: $primary-color;
+  }
+}
+
+h2 {
+  font-size: 1.4em;
+  font-weight: 400;
+  line-height: 1.2;
+  color: $primary-color-dark;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-weight: 600;
+  line-height: 1.1;
+  color: $primary-color-dark;
+  margin: 0 0 10px 0;
+  white-space: nowrap;
+  padding: 0;
+
+  &.fieldset-label {
+    margin: 30px 0;
+  }
+}
+
+.content-header {
+  position: relative;
+  padding: 15px 15px 0 15px;
+}
+
+.content {
+  min-height: 250px;
+  padding: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Grid
+.row {
+  position: relative;
+  margin: 0 -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.justify-content {
+  &-start {
+    justify-content: flex-start;
+  }
+  &-end {
+    justify-content: flex-end;
+  }
+  &-center {
+    justify-content: center;
+  }
+  &-around {
+    justify-content: space-around;
+  }
+  &-between {
+    justify-content: space-between;
+  }
+}
+
+.align-items {
+  &-start {
+    align-items: flex-start;
+  }
+  &-end {
+    align-items: flex-end;
+  }
+  &-center {
+    align-items: center;
+  }
+  &-stretch {
+    align-items: stretch;
+  }
+}
+
+@for $i from 1 through 12 {
+  $size: percentage((100 / 12 * $i) / 100);
+  .col-#{$i} {
+    padding: 0 15px;
+    flex: 0 0 $size;
+    max-width: $size;
+  }
+}
+
+@for $i from 1 through 12 {
+  $size: percentage((100 / 12 * $i) / 100);
+  .col-sm-#{$i} {
+    @media #{$small-and-up} {
+      padding: 0 15px;
+      flex: 0 0 $size;
+      max-width: $size;
+    }
+  }
+}
+
+@for $i from 1 through 12 {
+  $size: percentage((100 / 12 * $i) / 100);
+  .col-md-#{$i} {
+    @media #{$medium-and-up} {
+      padding: 0 15px;
+      flex: 0 0 $size;
+      max-width: $size;
+    }
+  }
+}
+
+@for $i from 1 through 12 {
+  $size: percentage((100 / 12 * $i) / 100);
+  .col-lg-#{$i} {
+    @media #{$large-and-up} {
+      padding: 0 15px;
+      flex: 0 0 $size;
+      max-width: $size;
+    }
+  }
+}
+
+@for $i from 1 through 12 {
+  $size: percentage((100 / 12 * $i) / 100);
+  .col-xl-#{$i} {
+    @media #{$xlarge-and-up} {
+      padding: 0 15px;
+      flex: 0 0 $size;
+      max-width: $size;
+    }
+  }
+}
+
+.text {
+  &-center {
+    text-align: center;
+  }
+  &-left {
+    text-align: left;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-success {
+    color: $success-color;;
+  }
+  &-warning {
+    color: $warning-color;
+  }
+  &-danger {
+    color: $error-color;
+  }
+}

@@ -1,0 +1,7 @@
+export const CREATE_TICKET = 'CREATE_TICKET';
+export const UPDATE_TICKET = 'UPDATE_TICKET';
+export const DELETE_TICKET = 'DELETE_TICKET';
+export const CLOSE_TICKET = 'CLOSE_TICKET';
+export const GET_TICKET = 'GET_TICKET';
+export const GET_TICKETS = 'GET_TICKETS';
+export const GET_USER_TICKETS = 'GET_USER_TICKETS';

@@ -1,0 +1,62 @@
+@import '../../styles/variables';
+
+.client-data {
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    border-radius: 50%;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+    padding: 0;
+    color: $primary-text-color;
+  }
+}
+
+.ticket-header {
+  text-align: center;
+  border: 2px solid $primary-text-color;
+  border-left: none;
+  border-right: none;
+  margin: 20px 0 0 0;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.log-table {
+
+  .log-row {
+    font-size: 0.875rem;
+    padding: 10px 15px;
+    color: $primary-color-dark;
+
+    &:nth-of-type(even) {
+      background: $table-row-odd-color;
+    }
+
+    &.log-row-weekday {
+      background: $secondary-text-color;
+    }
+
+    &.log-row-weekend {
+      background: $table-row-odd-color;
+    }
+
+    &.log-row-holiday {
+      background: $error-background;
+      color: $secondary-text-color;
+    }
+
+    &.log-row-result {
+      background: $primary-color-dark;
+      color: $secondary-text-color;
+    }
+  }
+}

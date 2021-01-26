@@ -1,0 +1,122 @@
+@import '../../styles/variables';
+
+.collapsed {
+  
+  .navbar {
+    flex: 0 0 calc(100% - 50px);
+  }
+}
+
+.navbar {
+  background: $primary-color-dark;
+  transition: flex .3s ease-in-out;
+  margin-bottom: 0;
+  flex: 0 0 calc(100% - 230px);
+  border: none;
+  min-height: 50px;
+  border-radius: 0;
+  position: relative;
+
+  & > div {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .sidebar-toggle {
+      color: $secondary-text-color;
+      background: none;
+      border: none;
+      box-shadow: none;
+      padding: 15px;
+      font-family: $icon-font-family;
+      cursor: pointer;
+
+      &:before {
+        content: "\f0c9";
+      }
+    }
+
+    .navbar-custom-menu {
+      
+      .navbar-nav {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        & > li {
+          position: relative;
+
+          &.user-menu {
+            
+            .dropdown-toggle {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+
+              .user-image {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                margin-right: 10px;
+                margin-top: -2px;
+              }
+            }
+          }
+
+          &.taskbar {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+          }
+
+          & > a {
+            position: relative;
+            display: block;
+            padding: 12.5px 15px;
+            line-height: 25px;
+            color: $primary-color-light;
+            font-size: 0.875em;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color .3s ease-in-out;
+
+            &:hover {
+              color: $secondary-text-color;
+            }
+
+            .fa {
+              margin-right: 5px;
+            }
+          }
+
+          & > button {
+            border: none;
+            box-shadow: none;
+            padding: 0;
+            margin: 0 5px;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            color: $primary-color-light;
+            background: $primary-color;
+            cursor: pointer;
+            border-radius: 5px;
+
+            &[disabled] {
+              background: $pagination-text-color;
+              color: $wrapper-background;
+              cursor: not-allowed;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+// ==================================================
+// Custom Variables
+// ==================================================
+
+// 1. Colors
+// ==================================================
+
+$primary-color: #1a5c6b;
+$primary-color-dark: #083843;
+$primary-color-light: #afd7e0;
+$secondary-color: #f3581b;
+$primary-text-color: #3590a5;
+$secondary-text-color: #ffffff;
+$border-color: #f4f5f8;
+$table-row-odd-color: #dedede;
+$pagination-border-color: #dddddd;
+$pagination-background-color: #fafafa;
+$pagination-disabled-text-color: #777777;
+$pagination-text-color: #666666;
+$primary-button-color: #00695c;
+
+// Body background
+$body-background: linear-gradient(to bottom, $primary-color-dark 0%, $primary-color 100%);
+$wrapper-background: #efefef;
+
+// User group colors
+$developer-background: linear-gradient(to bottom, #263238 0%, #455a64 100%);
+$design-background: linear-gradient(to bottom, #00695c 0%, #26a69a 100%);
+$management-background: linear-gradient(to bottom, $primary-color-dark 0%, $primary-color 100%);
+
+// Alert colors
+$success-color: #3c763d;
+$success-background: #00a65a;
+$success-border: #008d4c;
+$error-color: #721c24;
+$error-background: #721c24;
+$error-border: #721c24;
+$warning-color: #f39c12;
+
+
+// 2. Global
+// ==================================================
+
+// Media Query Ranges
+$xsmall-screen-down: 575px;
+$small-screen-down: 767px;
+$medium-screen-down: 991px;
+$large-screen-down: 1199px;
+
+$small-screen: 576px;
+$medium-screen: 768px;
+$large-screen: 992px;
+$xlarge-screen: 1200px;
+
+$small-and-up: "screen and (min-width: #{$small-screen})";
+$medium-and-up: "screen and (min-width: #{$medium-screen})";
+$large-and-up: "screen and (min-width: #{$large-screen})";
+$xlarge-and-up: "screen and (min-width: #{$xlarge-screen})";
+$xsmall-and-down: "screen and (max-width #{$xsmall-screen-down})";
+$small-and-down: "screen and (max-width #{$small-screen-down})";
+$medium-and-down: "screen and (max-width #{$medium-screen-down})";
+$large-and-down: "screen and (max-width #{$large-screen-down})";
+
+// 3. Typography
+// ==================================================
+
+$html-font-size: 16px;
+
+// 4. Font
+// ==================================================
+
+$primary-font-family: 'Source Sans Pro';
+$icon-font-family: 'FontAwesome'; 

@@ -1,0 +1,2 @@
+export const ALERT_MESSAGE = 'ALERT_MESSAGE';
+export const ALERT_DISMISS = 'ALERT_DISMISS';

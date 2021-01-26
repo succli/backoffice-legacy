@@ -1,0 +1,68 @@
+@import '../../styles/variables';
+
+.alert-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: rgba(0, 0, 0, .4);
+  z-index: 1900;
+  transition: all .3s ease-in-out;
+
+  .alert {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 1.25rem;
+    color: $secondary-text-color;
+    padding: 30px;
+    text-align: center;
+    margin: auto;
+    z-index: 2000;
+  
+    &.alert-danger {
+      background-color: $error-background;
+    }
+  
+    &.alert-success {
+      background-color: $success-background;
+    }
+  
+    &.alert-warning {
+      background-color: $warning-color;
+    }
+  
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      background: transparent;
+      padding: 0;
+      border: none;
+      box-shadow: none;
+  
+      .fa {
+        font-size: 0.875rem;
+        color: $secondary-text-color;
+      }
+    }
+  
+    .fa {
+      font-size: 3rem;
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+}

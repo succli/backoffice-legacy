@@ -1,0 +1,14 @@
+version: "2"
+services:
+  web:
+    ports:
+      - "32781:3000"
+    environment:
+      - ENVIRONMENT=production
+      - DOMAIN=localhost:32781
+    volumes:
+      - /var/docker-vols/backoffice/public:/opt/app/public
+  
+  mongo:
+    ports:
+      - "27018:27017"

@@ -1,0 +1,2 @@
+export const GET_CALENDARS = 'GET_CALENDARS';
+export const UPDATE_CALENDAR = 'UPDATE_CALENDAR';

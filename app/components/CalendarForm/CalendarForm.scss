@@ -1,0 +1,11 @@
+@import '../../styles/variables';
+
+.row-background {
+  background: $table-row-odd-color;
+  padding: 5px 10px;
+  border-bottom: 1px solid $pagination-disabled-text-color;
+
+  &-weekend {
+    background: $wrapper-background;
+  }
+}

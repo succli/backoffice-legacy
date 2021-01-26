@@ -1,0 +1,49 @@
+@import '../../styles/variables';
+
+.tabs {
+
+  .tab-nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    
+    .tab-nav-pill {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      margin-right: 3px;
+
+      &.active {
+        
+        button {
+          border-color: $secondary-color;
+        }
+      }
+
+      &.add-new {
+        
+        button {
+          color: $primary-button-color;
+          padding: 5px;
+          border-color: transparent;
+          background: transparent;
+        }
+      }
+
+      button {
+        background: $secondary-text-color;
+        border: none;
+        border-top: 3px solid $primary-color-dark;
+        box-shadow: none;
+        margin: 0;
+        padding: 5px 15px;
+        font-size: 0.875rem;
+        font-weight: 400;
+        color: $primary-color-dark;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+
+.login-wrapper {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background: $body-background;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  .login-box {
+    text-align: center;
+
+    img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    form {
+      margin: 10px 0;
+      background: $secondary-text-color;
+      padding: 30px 20px 20px 20px;
+      width: 350px;
+    }
+  }
+}
